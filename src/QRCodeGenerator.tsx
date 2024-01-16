@@ -13,7 +13,7 @@ const QRCodeGenerator: React.FC = () => {
 
   const generateQRCode = async () => {
     try {
-      const response = await axios.post('http://localhost:3001/api/generate-qr-code', { url });
+      const response = await axios.post('https://qr-backend-sam-nadar.onrender.com/api/generate-qr-code', { url });
       setGeneratedQRCode(response.data.qrCode);
     } catch (error) {
       console.error('Failed to generate QR code', error);
